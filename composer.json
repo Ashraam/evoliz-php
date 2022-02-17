@@ -1,0 +1,55 @@
+{
+    "name": "ashraam/evoliz-php",
+    "description": "Evoliz API PHP wrapper (Laravel compatible)",
+    "keywords": [
+        "Laravel",
+        "api",
+        "Evoliz",
+        "wrapper",
+        "PHP"
+    ],
+    "homepage": "https://github.com/ashraam/evoliz-php",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Romain Bertolucci",
+            "email": "romain@itconsulting-solutions.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.83"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.24",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ashraam\\Evoliz\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ashraam\\Evoliz\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ashraam\\Evoliz\\EvolizServiceProvider"
+            ]
+        }
+    }
+}
