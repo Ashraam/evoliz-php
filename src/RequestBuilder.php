@@ -47,7 +47,7 @@ class RequestBuilder
 
     public function withBody(array $data = [])
     {
-        return $this->withParams($data);
+        return $this->withJson($data);
     }
 
     public function withJson(array $data = [])
