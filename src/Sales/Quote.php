@@ -27,6 +27,17 @@ class Quote implements EvolizInterface
     }
 
     /**
+     * Create a new quote with given data. Totals, margins, included VAT fields are automatically calculated.
+     *
+     * @param array $body
+     * @return void
+     */
+    public function create(array $body = [])
+    {
+        return $this->builder->to('quotes')->withBody($body)->post();
+    }
+
+    /**
      * Return a quote by its speficied id
      *
      * @param Int $quoteId
