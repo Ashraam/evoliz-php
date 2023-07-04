@@ -27,6 +27,17 @@ class Quote implements EvolizInterface
     }
 
     /**
+     * Create a new quote with given data. Totals, margins, included VAT fields are automatically calculated.
+     *
+     * @param array $body
+     * @return void
+     */
+    public function create(array $body = [])
+    {
+        return $this->builder->to('quotes')->withBody($body)->post();
+    }
+
+    /**
      * Return a quote by its speficied id
      *
      * @param Int $quoteId
@@ -35,5 +46,28 @@ class Quote implements EvolizInterface
     public function get(Int $quoteId)
     {
         return $this->builder->to("quotes/{$quoteId}")->get();
+    }
+
+    /**
+     * Create a new invoice from the given quote.
+     *
+     * @param Int $quoteId
+     * @return void
+     */
+    public function invoice(Int $quoteId)
+    {
+        return $this->builder->to("quotes/{$quoteId}/invoice")->post();
+    }
+
+    /**
+     * Send an email with a link to the quote
+     *
+     * @param Int $quoteId
+     * @param array $body
+     * @return void
+     */
+    public function send(Int $quoteId, array $body = [])
+    {
+        return $this->builder->to("invoices/{$quoteId}/send")->withBody($body)->post();
     }
 }

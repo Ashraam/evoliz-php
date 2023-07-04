@@ -154,8 +154,35 @@ $quote_repository = new Quote(new Evoliz(...));
 // Return a list of quotes visible by the current User, according to visibility restriction set in user profile
 $quote_repository->list();
 
+// Create a new draft quote with given data. Totals, margins, retention, included VAT fields are automatically calculated.
+$draft = $quote_repository->create([
+    'external_document_number' => 'my-custom-id',
+    'documentdate' => '2022-02-14',
+    'clientid' => 3045161,
+    'term' => [
+        'paytermid' => 1,
+        'recovery_indemnity' => true
+    ],
+    'items' => [
+        [
+            'designation' => 'Item 1',
+            'quantity' => 4,
+            'unit_price_vat_exclude' => 5.73
+        ]
+    ]
+]);
+
 // Return a quote by its speficied id
 $quote_repository->get($quoteId);
+
+// Create a new invoice from the given quote
+$quote_repository->invoice($quoteId);
+
+// Send an email with a link to the quote
+$quote_repository->send($quoteId, [
+    'to' => ['user@gmail.com'],
+    'subject' => 'The email subject'
+]);
 ```
 
 ## Sales\SaleOrder
