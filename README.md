@@ -174,6 +174,9 @@ $draft = $quote_repository->create([
 
 // Return a quote by its speficied id
 $quote_repository->get($quoteId);
+
+// Create a new invoice from the given quote
+$quote_repository->invoice($quoteId);
 ```
 
 ## Sales\SaleOrder

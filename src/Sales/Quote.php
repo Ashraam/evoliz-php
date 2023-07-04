@@ -47,4 +47,15 @@ class Quote implements EvolizInterface
     {
         return $this->builder->to("quotes/{$quoteId}")->get();
     }
+
+    /**
+     * Create a new invoice from the given quote.
+     *
+     * @param Int $quoteId
+     * @return void
+     */
+    public function invoice(Int $quoteId)
+    {
+        return $this->builder->to("quotes/{$quoteId}/invoice")->post();
+    }
 }
