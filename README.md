@@ -177,6 +177,12 @@ $quote_repository->get($quoteId);
 
 // Create a new invoice from the given quote
 $quote_repository->invoice($quoteId);
+
+// Send an email with a link to the quote
+$quote_repository->send($quoteId, [
+    'to' => ['user@gmail.com'],
+    'subject' => 'The email subject'
+]);
 ```
 
 ## Sales\SaleOrder
