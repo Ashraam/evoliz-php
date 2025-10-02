@@ -19,7 +19,6 @@ class PurchaseClassification implements EvolizInterface
      * Return a list of Purchases classifications
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class PurchaseClassification implements EvolizInterface
      * Return a purchase classification by its specified Id
      *
      * @param Int $classificationId
-     * @return void
      */
     public function get(Int $classificationId)
     {

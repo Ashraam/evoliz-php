@@ -19,7 +19,6 @@ class VatRates implements EvolizInterface
      * Return a list of vat rates visible by the current user.
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class VatRates implements EvolizInterface
      * Return a unit code by its specified Id
      *
      * @param Int $vatRateId
-     * @return void
      */
     public function get(Int $vatRateId)
     {

@@ -19,7 +19,6 @@ class SaleOrder implements EvolizInterface
      * Return a list of sale orders visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class SaleOrder implements EvolizInterface
      * Create a new sale order with given data. Totals, margins, included VAT fields are automatically calculated.
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class SaleOrder implements EvolizInterface
      * Return a sale order by its speficied id
      *
      * @param Int $orderId
-     * @return void
      */
     public function get(Int $orderId)
     {
@@ -52,7 +49,6 @@ class SaleOrder implements EvolizInterface
      * Create a new invoice from the given sale order.
      *
      * @param Int $orderId
-     * @return void
      */
     public function invoice(Int $orderId)
     {

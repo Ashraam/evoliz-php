@@ -19,7 +19,6 @@ class User implements EvolizInterface
      * Return a list of users visible by the current User, according to visibility restriction set in user profile.
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class User implements EvolizInterface
      * Get the detail of a user by it's id
      *
      * @param Int $userId
-     * @return void
      */
     public function get(Int $userId)
     {

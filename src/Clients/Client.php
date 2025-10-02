@@ -19,7 +19,6 @@ class Client implements EvolizInterface
      * Return the client list of the specified or current user company
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Client implements EvolizInterface
      * Create a new client with given data
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class Client implements EvolizInterface
      * Return a client by its speficied id
      *
      * @param Int $clientId
-     * @return void
      */
     public function get(Int $clientId)
     {

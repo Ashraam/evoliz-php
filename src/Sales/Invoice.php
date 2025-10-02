@@ -19,7 +19,6 @@ class Invoice implements EvolizInterface
      * Return a list of invoices visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Invoice implements EvolizInterface
      * Create a new draft invoice with given data. Totals, margins, retention, included VAT fields are automatically calculated.
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class Invoice implements EvolizInterface
      * Save the invoice with a definitive document number. The status must be “filled” and will be changed to “created”
      *
      * @param Int $invoiceId
-     * @return void
      */
     public function save(Int $invoiceId)
     {
@@ -52,7 +49,6 @@ class Invoice implements EvolizInterface
      * Return an invoice by its speficied id
      *
      * @param Int $invoiceId
-     * @return void
      */
     public function get(Int $invoiceId)
     {
@@ -64,7 +60,6 @@ class Invoice implements EvolizInterface
      *
      * @param Int $invoiceId
      * @param array $body
-     * @return void
      */
     public function send(Int $invoiceId, array $body = [])
     {
@@ -76,7 +71,6 @@ class Invoice implements EvolizInterface
      *
      * @param Int $invoiceId
      * @param array $body
-     * @return void
      */
     public function payment(Int $invoiceId, $body = [])
     {
@@ -88,7 +82,6 @@ class Invoice implements EvolizInterface
      *
      * @param Int $invoiceId
      * @param array $query
-     * @return void
      */
     public function payments(Int $invoiceId, array $query = [])
     {

@@ -19,7 +19,6 @@ class BankAccount implements EvolizInterface
      * Return a list of banks visible by the current user, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class BankAccount implements EvolizInterface
      * Return a bank details by its specific id, according to visibility restriction set in user profile
      *
      * @param Int $bankId
-     * @return void
      */
     public function get(Int $bankId)
     {

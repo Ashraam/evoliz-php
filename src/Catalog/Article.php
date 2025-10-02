@@ -19,7 +19,6 @@ class Article implements EvolizInterface
      * Return a list of articles
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Article implements EvolizInterface
      * Create a new article with given data
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class Article implements EvolizInterface
      * Get the detail of an article by it's id
      *
      * @param Int $articleId
-     * @return void
      */
     public function get(Int $articleId)
     {

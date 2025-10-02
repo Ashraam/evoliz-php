@@ -19,7 +19,6 @@ class Analytics implements EvolizInterface
      * Return a list of analytics axis
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Analytics implements EvolizInterface
      * Return an analytic axis by its specified Id
      *
      * @param Int $analyticId
-     * @return void
      */
     public function get(Int $analyticId)
     {

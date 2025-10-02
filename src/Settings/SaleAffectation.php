@@ -19,7 +19,6 @@ class SaleAffectation implements EvolizInterface
      * Return a list of sales affectations
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class SaleAffectation implements EvolizInterface
      * Return a sale affectation by its specified Id
      *
      * @param Int $affectationId
-     * @return void
      */
     public function get(Int $affectationId)
     {

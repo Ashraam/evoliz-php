@@ -19,7 +19,6 @@ class Quote implements EvolizInterface
      * Return a list of quotes visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Quote implements EvolizInterface
      * Create a new quote with given data. Totals, margins, included VAT fields are automatically calculated.
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class Quote implements EvolizInterface
      * Return a quote by its speficied id
      *
      * @param Int $quoteId
-     * @return void
      */
     public function get(Int $quoteId)
     {
@@ -52,7 +49,6 @@ class Quote implements EvolizInterface
      * Create a new invoice from the given quote.
      *
      * @param Int $quoteId
-     * @return void
      */
     public function invoice(Int $quoteId)
     {
@@ -64,7 +60,6 @@ class Quote implements EvolizInterface
      *
      * @param Int $quoteId
      * @param array $body
-     * @return void
      */
     public function send(Int $quoteId, array $body = [])
     {

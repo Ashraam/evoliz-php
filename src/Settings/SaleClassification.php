@@ -19,7 +19,6 @@ class SaleClassification implements EvolizInterface
      * Return a list of sales classifications
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class SaleClassification implements EvolizInterface
      * Return a sale classification by its specified Id
      *
      * @param Int $classificationId
-     * @return void
      */
     public function get(Int $classificationId)
     {

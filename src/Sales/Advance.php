@@ -19,7 +19,6 @@ class Advance implements EvolizInterface
      * Return a list of advances visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -31,7 +30,6 @@ class Advance implements EvolizInterface
      *
      * @param Int $advanceId
      * @param array $query
-     * @return void
      */
     public function payments(Int $advanceId, array $query = [])
     {
@@ -43,7 +41,6 @@ class Advance implements EvolizInterface
      *
      * @param Int $advanceId
      * @param array $body
-     * @return void
      */
     public function payment(Int $advanceId, array $body = [])
     {
@@ -54,7 +51,6 @@ class Advance implements EvolizInterface
      * Return an advance by its speficied id
      *
      * @param Int $advanceId
-     * @return void
      */
     public function get(Int $advanceId)
     {
