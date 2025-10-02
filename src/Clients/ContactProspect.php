@@ -19,7 +19,6 @@ class ContactProspect implements EvolizInterface
      * Return a prospect contact list
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class ContactProspect implements EvolizInterface
      * Return a prospect contact by it's id
      *
      * @param Int $contactId
-     * @return void
      */
     public function get(Int $contactId)
     {

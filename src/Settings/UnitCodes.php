@@ -19,7 +19,6 @@ class UnitCodes implements EvolizInterface
      * Return a list of units codes, used in various endpoints
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class UnitCodes implements EvolizInterface
      * Return a unit code by its specified Id
      *
      * @param Int $unitCodeId
-     * @return void
      */
     public function get(Int $unitCodeId)
     {

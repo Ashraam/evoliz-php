@@ -19,7 +19,6 @@ class Reports implements EvolizInterface
      * Get amount of overdue payments by period categories
      *
      * @param array $query
-     * @return void
      */
     public function payments(array $query = [])
     {
@@ -30,7 +29,6 @@ class Reports implements EvolizInterface
      * Return a buy by its speficied id
      *
      * @param array $query
-     * @return void
      */
     public function settlements(array $query = [])
     {
@@ -41,7 +39,6 @@ class Reports implements EvolizInterface
      * Get turnover report data
      *
      * @param array $query
-     * @return void
      */
     public function turnover(array $query = [])
     {

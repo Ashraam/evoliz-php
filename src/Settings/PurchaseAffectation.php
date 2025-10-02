@@ -19,7 +19,6 @@ class PurchaseAffectation implements EvolizInterface
      * Return a list of Purchases affectations
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class PurchaseAffectation implements EvolizInterface
      * Return a purchase affectation by its specified Id
      *
      * @param Int $affectationId
-     * @return void
      */
     public function get(Int $affectationId)
     {

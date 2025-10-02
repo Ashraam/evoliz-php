@@ -19,7 +19,6 @@ class BankItem implements EvolizInterface
      * Return a list of bank items visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class BankItem implements EvolizInterface
      * Return a bank item by its speficied id
      *
      * @param Int $bankItemId
-     * @return void
      */
     public function get(Int $bankItemId)
     {
@@ -41,7 +39,6 @@ class BankItem implements EvolizInterface
      * Lock a bank item
      *
      * @param Int $bankItemId
-     * @return void
      */
     public function lock(Int $bankItemId)
     {
@@ -54,7 +51,6 @@ class BankItem implements EvolizInterface
      * Unlock a bank item
      *
      * @param Int $bankItemId
-     * @return void
      */
     public function unlock(Int $bankItemId)
     {

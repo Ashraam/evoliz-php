@@ -19,7 +19,6 @@ class MyUnisoft implements EvolizInterface
      * Connect MyUnisoft application in company with api key
      *
      * @param string $api_key
-     * @return void
      */
     public function connect(string $api_key)
     {

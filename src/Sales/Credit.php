@@ -19,7 +19,6 @@ class Credit implements EvolizInterface
      * Return a list of credits visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Credit implements EvolizInterface
      * Return a credit by its speficied id
      *
      * @param Int $creditId
-     * @return void
      */
     public function get(Int $creditId)
     {

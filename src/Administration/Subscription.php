@@ -17,8 +17,6 @@ class Subscription implements EvolizInterface
 
     /**
      * Return the list of the company's subscriptions.
-     *
-     * @return void
      */
     public function list()
     {

@@ -19,7 +19,6 @@ class PaymentTerms implements EvolizInterface
      * Return a list of payment terms
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class PaymentTerms implements EvolizInterface
      * Return a payment term by its specified id
      *
      * @param Int $payTermId
-     * @return void
      */
     public function get(Int $payTermId)
     {

@@ -19,7 +19,6 @@ class ContactClient implements EvolizInterface
      * Return a client contact list
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class ContactClient implements EvolizInterface
      * Create a new client contact with given data
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class ContactClient implements EvolizInterface
      * Return a client contact by it's id
      *
      * @param Int $contactId
-     * @return void
      */
     public function get(Int $contactId)
     {

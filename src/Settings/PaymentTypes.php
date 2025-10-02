@@ -19,7 +19,6 @@ class PaymentTypes implements EvolizInterface
      * Return a list of payment types
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class PaymentTypes implements EvolizInterface
      * Return a payment type by its specified id
      *
      * @param Int $payTypeId
-     * @return void
      */
     public function get(Int $payTypeId)
     {

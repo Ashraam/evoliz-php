@@ -19,7 +19,6 @@ class Journals implements EvolizInterface
      * Get trial balance data
      *
      * @param array $query
-     * @return void
      */
     public function trial_balance(array $query = [])
     {
@@ -30,7 +29,6 @@ class Journals implements EvolizInterface
      * Get general ledger data
      *
      * @param array $query
-     * @return void
      */
     public function general_ledger(array $query = [])
     {
@@ -41,7 +39,6 @@ class Journals implements EvolizInterface
      * Get FEC journal entries
      *
      * @param array $query
-     * @return void
      */
     public function fec(array $query = [])
     {
@@ -52,7 +49,6 @@ class Journals implements EvolizInterface
      * Get banks journal entries
      *
      * @param array $query
-     * @return void
      */
     public function banks(array $query = [])
     {
@@ -63,7 +59,6 @@ class Journals implements EvolizInterface
      * Get Cashes journal entries
      *
      * @param array $query
-     * @return void
      */
     public function cash(array $query = [])
     {
@@ -74,7 +69,6 @@ class Journals implements EvolizInterface
      * Get sales journal entries
      *
      * @param array $query
-     * @return void
      */
     public function sales(array $query = [])
     {
@@ -85,7 +79,6 @@ class Journals implements EvolizInterface
      * Get purchases journal data
      *
      * @param array $query
-     * @return void
      */
     public function purchases(array $query = [])
     {
@@ -96,7 +89,6 @@ class Journals implements EvolizInterface
      * Get miscellaneous operations journal entries
      *
      * @param array $query
-     * @return void
      */
     public function miscellaneous(array $query = [])
     {
@@ -107,7 +99,6 @@ class Journals implements EvolizInterface
      * Get opening balance journal entries
      *
      * @param array $query
-     * @return void
      */
     public function opening_balance(array $query = [])
     {

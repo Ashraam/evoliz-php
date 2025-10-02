@@ -19,7 +19,6 @@ class Accounts implements EvolizInterface
      * Return a list of accounting classification visible by the current user.
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Accounts implements EvolizInterface
      * Create a new accounting classification with given data
      *
      * @param array $body
-     * @return void
      */
     public function create(array $body = [])
     {
@@ -41,7 +39,6 @@ class Accounts implements EvolizInterface
      * Return an accounting account by its specified Id.
      *
      * @param Int $accountId
-     * @return void
      */
     public function get(Int $accountId)
     {

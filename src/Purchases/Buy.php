@@ -19,7 +19,6 @@ class Buy implements EvolizInterface
      * Return a list of buys visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Buy implements EvolizInterface
      * Return a buy by its speficied id
      *
      * @param Int $buyId
-     * @return void
      */
     public function get(Int $buyId)
     {
@@ -41,7 +39,6 @@ class Buy implements EvolizInterface
      * Update buy state to locked
      *
      * @param Int $buyId
-     * @return void
      */
     public function lock(Int $buyId)
     {
@@ -54,7 +51,6 @@ class Buy implements EvolizInterface
      * Update buy state to unlocked
      *
      * @param Int $buyId
-     * @return void
      */
     public function unlock(Int $buyId)
     {

@@ -20,7 +20,6 @@ class DocumentLink implements EvolizInterface
      *
      * @param String $documentType
      * @param Int $documentId
-     * @return void
      */
     public function get(String $documentType, Int $documentId)
     {

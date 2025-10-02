@@ -19,7 +19,6 @@ class SupplierCredit implements EvolizInterface
      * Return a list of Supplier credits visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class SupplierCredit implements EvolizInterface
      * Return a supplier credit by its speficied id
      *
      * @param Int $supplierCreditId
-     * @return void
      */
     public function get(Int $supplierCreditId)
     {
@@ -41,7 +39,6 @@ class SupplierCredit implements EvolizInterface
      * Update supplier credit state to locked
      *
      * @param Int $supplierCreditId
-     * @return void
      */
     public function lock(Int $supplierCreditId)
     {
@@ -54,7 +51,6 @@ class SupplierCredit implements EvolizInterface
      * Update supplier credit state to unlocked
      *
      * @param Int $supplierCreditId
-     * @return void
      */
     public function unlock(Int $supplierCreditId)
     {

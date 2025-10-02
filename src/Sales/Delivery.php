@@ -19,7 +19,6 @@ class Delivery implements EvolizInterface
      * Return a list of deliveries visible by the current User, according to visibility restriction set in user profile
      *
      * @param array $query
-     * @return void
      */
     public function list(array $query = [])
     {
@@ -30,7 +29,6 @@ class Delivery implements EvolizInterface
      * Return a delivery by its speficied id
      *
      * @param Int $deliveryId
-     * @return void
      */
     public function get(Int $deliveryId)
     {
