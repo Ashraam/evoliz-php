@@ -56,6 +56,31 @@ class Invoice implements EvolizInterface
     }
 
     /**
+     * Create a draft partial credit note from the given invoice. Item amounts must be sent as positive
+     * values ; the API automatically converts them to negative amounts and inherits the invoice pricing mode.
+     *
+     * @param Int $invoiceId
+     * @param array $body
+     */
+    public function partialCredit(Int $invoiceId, array $body = [])
+    {
+        return $this->builder->to("invoices/{$invoiceId}/partial-credit")->withBody($body)->post();
+    }
+
+    /**
+     * Create a finalized total credit note from the given invoice, with inverted amounts and bonuses copied
+     * from the invoice. If the credit amount equals the invoice amount, the invoice is marked as deleted.
+     * Cannot be used if the invoice has payments. An optional "documentdate" (today to +30 days) may be provided.
+     *
+     * @param Int $invoiceId
+     * @param array $body
+     */
+    public function credit(Int $invoiceId, array $body = [])
+    {
+        return $this->builder->to("invoices/{$invoiceId}/credit")->withBody($body)->post();
+    }
+
+    /**
      * Send an email with a link to the invoice
      *
      * @param Int $invoiceId

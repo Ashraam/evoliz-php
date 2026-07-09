@@ -1,7 +1,7 @@
 # PHP Wrapper for Evoliz API
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ashraam/evoliz.svg?style=flat-square)](https://packagist.org/packages/ashraam/evoliz-php)
-[![Total Downloads](https://img.shields.io/packagist/dt/ashraam/evoliz.svg?style=flat-square)](https://packagist.org/packages/ashraam/evoliz-php)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ashraam/evoliz-php)](https://packagist.org/packages/ashraam/evoliz-php)
+[![Total Downloads](https://img.shields.io/packagist/dt/ashraam/evoliz-php)](https://packagist.org/packages/ashraam/evoliz-php)
 
 All the query, body parameters can be found on the official [API documentation](https://www.evoliz.io/documentation)
 
@@ -141,6 +141,26 @@ $invoices_repository->payment($invoiceId, [
 
 // List all payments of the given invoice
 $invoices_repository->payments($invoiceId);
+
+// Create a draft partial credit note from the given invoice (item amounts must be positive, the API converts them to negative)
+$invoices_repository->partialCredit($invoiceId, [
+    'clientid' => 15,
+    'documentdate' => '2025-01-10',
+    'term' => ['id' => 1],
+    'items' => [
+        [
+            'description' => 'Consulting',
+            'quantity' => 2,
+            'unit_price' => 150,
+            'vat_rate' => 20
+        ]
+    ]
+]);
+
+// Create a finalized total credit note from the given invoice (documentdate is optional, defaults to today, must be within +30 days)
+$invoices_repository->credit($invoiceId, [
+    'documentdate' => '2025-01-10'
+]);
 ```
 
 ## Sales\Quote
@@ -264,6 +284,9 @@ $credit_repository->list();
 
 // Return a credit by its speficied id
 $credit_repository->get($creditId);
+
+// Save the credit with a definitive document number (status must be "filled", changed to "created")
+$credit_repository->save($creditId);
 ```
 
 ## Sales\Advance
