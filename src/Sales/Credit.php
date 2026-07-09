@@ -34,4 +34,14 @@ class Credit implements EvolizInterface
     {
         return $this->builder->to("credits/{$creditId}")->get();
     }
+
+    /**
+     * Save the credit with a definitive document number. The status must be “filled” and will be changed to “created”
+     *
+     * @param Int $creditId
+     */
+    public function save(Int $creditId)
+    {
+        return $this->builder->to("credits/{$creditId}/create")->post();
+    }
 }
