@@ -74,6 +74,6 @@ class Quote implements EvolizInterface
      */
     public function send(Int $quoteId, array $body = [])
     {
-        return $this->builder->to("invoices/{$quoteId}/send")->withBody($body)->post();
+        return $this->builder->to("quotes/{$quoteId}/send")->withBody($body)->post();
     }
 }
