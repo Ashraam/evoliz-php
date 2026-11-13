@@ -198,6 +198,11 @@ $quote_repository->get($quoteId);
 // Create a new invoice from the given quote
 $quote_repository->invoice($quoteId);
 
+// Create a new advance from the given quote
+$quote_repository->advance($quoteId, [
+    // see the official documentation for the body parameters
+]);
+
 // Send an email with a link to the quote
 $quote_repository->send($quoteId, [
     'to' => ['user@gmail.com'],
