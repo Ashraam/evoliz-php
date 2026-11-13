@@ -56,6 +56,17 @@ class Quote implements EvolizInterface
     }
 
     /**
+     * Create a new advance (down payment invoice) from the given quote.
+     *
+     * @param Int $quoteId
+     * @param array $body
+     */
+    public function advance(Int $quoteId, array $body = [])
+    {
+        return $this->builder->to("quotes/{$quoteId}/advances")->withBody($body)->post();
+    }
+
+    /**
      * Send an email with a link to the quote
      *
      * @param Int $quoteId
